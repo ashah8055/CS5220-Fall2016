@@ -17,5 +17,12 @@
 <td>ContactUs</td>
 </tr>
 </table>
+<h3>Our available amenities are as follow:</h3><br>
+<ul>
+<li>Cable ,Statellite and Premium TV channels
+<li>Air Conditioning
+<li>Free Wi-Fi
+<li>Free Parcking
+</ul>
 </body>
 </html>
