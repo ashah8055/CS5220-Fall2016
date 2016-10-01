@@ -1,5 +1,6 @@
 package bookmystay.model;
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Embedded;
@@ -34,6 +35,11 @@ public class User implements Serializable{
     @Embedded
     private Address address;
     
+    //one user can have multiple credit card
     @OneToMany(mappedBy="user")
-    private Creditcard card;
+    private List<Creditcard> card;
+    
+    //one user can have multiple reservation
+    @OneToMany(mappedBy="user")
+    private List<Reservation> reservation;
 }
