@@ -32,4 +32,62 @@ public class  Creditcard {
     @ManyToOne
 	private User user;
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Integer getCardNo() {
+		return cardNo;
+	}
+
+	public void setCardNo(Integer cardNo) {
+		this.cardNo = cardNo;
+	}
+
+	public String getCardType() {
+		return cardType;
+	}
+
+	public void setCardType(String cardType) {
+		this.cardType = cardType;
+	}
+
+	public Integer getSecCode() {
+		return secCode;
+	}
+
+	public void setSecCode(Integer secCode) {
+		this.secCode = secCode;
+	}
+
+	public creditAddress getCreAddr() {
+		return creAddr;
+	}
+
+	public void setCreAddr(creditAddress creAddr) {
+		this.creAddr = creAddr;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+    
+    
+
 }

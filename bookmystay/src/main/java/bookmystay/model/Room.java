@@ -1,5 +1,6 @@
 package bookmystay.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Access;
@@ -17,7 +18,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "room")
-public class Room{
+public class Room implements Serializable{
+    private static final long serialVersionID = 1L;
 
 	@Id
     @GeneratedValue

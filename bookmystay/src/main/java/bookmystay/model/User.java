@@ -42,4 +42,81 @@ public class User implements Serializable{
     //one user can have multiple reservation
     @OneToMany(mappedBy="user")
     private List<Reservation> reservation;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getUserFname() {
+		return userFname;
+	}
+
+	public void setUserFname(String userFname) {
+		this.userFname = userFname;
+	}
+
+	public String getUserLname() {
+		return userLname;
+	}
+
+	public void setUserLname(String userLname) {
+		this.userLname = userLname;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Integer getSecQuestion() {
+		return secQuestion;
+	}
+
+	public void setSecQuestion(Integer secQuestion) {
+		this.secQuestion = secQuestion;
+	}
+
+	public String getAnswer() {
+		return answer;
+	}
+
+	public void setAnswer(String answer) {
+		this.answer = answer;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+	public List<Creditcard> getCard() {
+		return card;
+	}
+
+	public void setCard(List<Creditcard> card) {
+		this.card = card;
+	}
+
+	public List<Reservation> getReservation() {
+		return reservation;
+	}
+    
 }
