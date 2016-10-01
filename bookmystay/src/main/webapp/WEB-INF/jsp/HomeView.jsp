@@ -13,10 +13,10 @@
 <tr>
 <td><a href="Home">Home</a></td>
 <td><a href="Amenities">Amenities</a></td>
-<td>Reservation</td>
+<td><a href="Reservation">Reservation</a></td>
 <td><a href="SignUp">SignIn/ SignUp</a></td>
-<td>Login</td>
-<td>ContactUs</td>
+<td><a href="Login">Login</a></td>
+<td><a href="Contact">ContactUs</a></td>
 </tr>
 </table>
 </div>

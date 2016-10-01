@@ -1,14 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<style type="text/css">
+#custdetailsleft {
+    float:left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+#roomcal {
+    float:right;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<title>Insert title here</title>
-</head>
-<body>
 <div class="container">
 <table class='table' border="2" align="center">
 <tr>
@@ -21,7 +32,11 @@
 </tr>
 </table>
 </div>
-<form action="" method="post" >
+<title>Insert title here</title>
+</head>
+<body>
+<div id="custdetailsleft">
+<form action="ReservationConfirm" method="post">
 		<table cellspacing="10">
 			<tr>
 				<td colspan="3"><h3>Personal Information</h3>
@@ -46,21 +61,23 @@
 			</tr>
 			<tr>
 				<td>Confirm Password
-				<td colspan="3"><input type="password"
+				<td colspan="2"><input type="password"
 					name="txtconfirmpassword">
 			</tr>
 			<tr>
 				<td>Security Question
-				<td colspan="3"><select>
+				<td><select>
 						<option value="q1">Which is your favorite car model?</option>
 						<option value="q2">Which is your nick name?</option>
 				</select></td>
 			</tr>
 			<tr>
+				<td>Answer</td>
+				<td><input type="text" name="txtsecans"></td>
 
 			</tr>
 			<tr>
-				<td colspan="4"><h3>Address Information</h3>
+				<td colspan="3"><h3>Address Information</h3>
 			</tr>
 			<tr>
 				<td>Address
@@ -86,7 +103,8 @@
 				<td colspan="2"><h3>Credit Card Information</h3>
 			</tr>
 			<tr>
-				<td>Credit Card Company <select>
+				<td>Credit Card Company 
+				<td><select>
 						<option value="Visa">Visa</option>
 						<option value="MasterCard">MasterCard</option>
 						<option value="Discover">Discover</option>
@@ -122,10 +140,48 @@
 				</td>
 			</tr>
 			<tr>
-				<td><input type="submit" value="submit">
+				<td><input type="submit" value="Book">
 				<td colspan="1"><input type="reset" value="clear">
 			</tr>
 		</table>
 	</form>
+	</div>
+	<div id="roomcal">
+	<form action="ReservationSelection" >
+	<table>
+	<tr>
+		
+	<td>Check-In
+	<td> ------
+	</tr>
+	<tr>
+	<td>Check-Out
+	<td>-------
+	</tr>
+	<tr>
+	<td><input type="submit" value="Add">
+	<td><hr>
+	</tr>
+	<tr>
+	<td>Room Information
+	<td>
+	<td><hr>
+	</tr>
+	<tr>
+	<td>Total:
+	</td>
+	</tr>
+	<tr>
+	<td>Tax:
+	
+	</tr>
+	<tr>
+	<td>Grand Total:
+	
+	</tr>
+	</table>
+	</form>
+	</div>
+
 </body>
 </html>
