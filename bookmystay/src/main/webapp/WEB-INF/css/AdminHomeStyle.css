@@ -1,0 +1,28 @@
+/* sizes */
+#main-wrap > div { min-height: 750px; }
+
+
+#header,
+#footer {
+    min-height: 40px;
+}
+
+/* layout */
+#main-wrap {
+    /* overflow to handle inner floating block */
+    overflow: hidden;
+}
+
+#sidebar {
+    float: left;
+    width: 30%;
+background:red;
+}
+
+#content-wrap {
+    float: right;
+    width: 70%;
+}   
+.body{
+	background-color:red;
+}
