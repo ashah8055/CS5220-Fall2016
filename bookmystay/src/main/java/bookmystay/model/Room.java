@@ -1,6 +1,7 @@
 package bookmystay.model;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Access;
@@ -32,10 +33,15 @@ public class Room implements Serializable{
 	@Column(name = "bed_num")
 	private int bedNum; //added
 	
-	@Column(name = "bed_tyoe")
+	@Column(name = "bed_type")
 	private String bedType;  //added
 	private boolean smoke;
 	private Integer capacity; //for how many people
+	
+	@Column(name = "date_range")
+	private Date[] dateRange;  //date range for different rate, [20160901,20160907]
+	
+	private float rate;  //room rate
 	
 	@JoinTable(name = "room_images",
 			joinColumns = @JoinColumn(name = "room_id"))
@@ -47,9 +53,6 @@ public class Room implements Serializable{
 	//many rooms can have same facility
 	@ManyToOne
 	private Facility facility;
-	
-	@OneToMany(mappedBy="room")
-	private List<RoomStatus> status;
 
 	public Integer getId() {
 		return id;
@@ -122,13 +125,4 @@ public class Room implements Serializable{
 	public void setFacility(Facility facility) {
 		this.facility = facility;
 	}
-
-	public List<RoomStatus> getStatus() {
-		return status;
-	}
-
-	public void setStatus(List<RoomStatus> status) {
-		this.status = status;
-	}
-	
 }

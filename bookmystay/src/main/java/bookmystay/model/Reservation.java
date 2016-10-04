@@ -33,9 +33,6 @@ public class Reservation implements Serializable{
     @ManyToOne
 	private User user;
 	
-	@OneToMany(mappedBy="reservation")
-	private List<RoomStatus> roomStatus;
-	
 	private boolean status; //0: cancelled 1: valid
     
 	@OneToOne
@@ -87,14 +84,6 @@ public class Reservation implements Serializable{
 
 	public void setUser(User user) {
 		this.user = user;
-	}
-
-	public List<RoomStatus> getRoomStatus() {
-		return roomStatus;
-	}
-
-	public void setRoomStatus(List<RoomStatus> roomStatus) {
-		this.roomStatus = roomStatus;
 	}
 
 	public boolean isStatus() {
