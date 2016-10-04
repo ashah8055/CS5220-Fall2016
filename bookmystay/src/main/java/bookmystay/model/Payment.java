@@ -18,6 +18,8 @@ public class Payment implements Serializable{
     @GeneratedValue
 	private Integer id;
 	
+	private float amount;
+
 	@OneToOne
 	private Reservation reservation;
 	
@@ -32,6 +34,14 @@ public class Payment implements Serializable{
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+	
+	public float getAmount() {
+		return amount;
+	}
+
+	public void setAmount(float amount) {
+		this.amount = amount;
 	}
 
 	public Reservation getReservation() {
